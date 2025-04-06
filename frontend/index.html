@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Helmet & Plate Detection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="logo">🚨 HelmetPlate AI</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Sections -->
+  <main>
+    <!-- Home / Upload Section -->
+    <section id="home" class="section hero">
+      <div class="card upload-box">
+        <h2>Upload Video for Detection</h2>
+        <form id="uploadForm">
+          <input type="file" id="videoInput" name="video" accept="video/*" required />
+          <button type="submit">Upload & Detect</button>
+        </form>
+        <video id="outputVideo" controls></video>
+        <ul id="plateList"></ul>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about" style="display: none;">
+      <div class="card">
+        <h2>About This App</h2>
+        <p>
+          HelmetPlate AI is a smart traffic safety application that uses AI to detect helmet usage and recognize number plates from motorbike videos. This tool helps enforce road safety laws efficiently and reduces manual monitoring effort by authorities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact" style="display: none;">
+      <div class="card">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 HelmetPlate AI • All rights reserved.</p>
+  </footer>
+
+  <!-- Script for Section Switching -->
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll(".section");
+      sections.forEach((section) => {
+        section.style.display = "none";
+      });
+
+      document.getElementById(sectionId).style.display = "flex";
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      showSection("home");
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = link.getAttribute("href").substring(1);
+          showSection(target);
+        });
+      });
+    });
+  </script>
+
+  <!-- Your original JS -->
+  <script src="script.js"></script>
+</body>
+</html>
