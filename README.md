@@ -41,11 +41,7 @@ Installation
 Prerequisites
 Before running the project, ensure you have Python and pip installed. Additionally, install the required libraries:
 
-bash
-Copy
-Edit
-pip install flask opencv-python tensorflow pytesseract
-You will also need the following files:
+
 
 YOLO model weights (yolov4.weights)
 
@@ -53,8 +49,7 @@ YOLO config file (yolov4.cfg)
 
 YOLO class names (coco.names)
 
-Running the Project
-Clone the repository:
+
 
 
 
