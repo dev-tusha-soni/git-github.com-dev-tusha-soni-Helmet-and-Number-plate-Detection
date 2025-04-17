@@ -56,18 +56,7 @@ YOLO class names (coco.names)
 Running the Project
 Clone the repository:
 
-bash
-Copy
-Edit
-git clone https://github.com/yourusername/helmet-and-number-plate-detection.git
-cd helmet-and-number-plate-detection
-Run the Flask API:
 
-bash
-Copy
-Edit
-python app.py
-Visit http://127.0.0.1:5000/ in your browser to access the frontend.
 
 Code Explanation
 Backend (app.py)
